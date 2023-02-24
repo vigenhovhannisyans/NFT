@@ -1,0 +1,36 @@
+<div class="side">
+    <div class="side__icon-list">
+
+    <div class="side__icon">
+        <nft-icon
+        [name]="'logo.svg'"
+        [width]="21"
+        [height]="30"
+        ></nft-icon>
+    </div>
+
+    <div *ngFor="let route of routers"
+     [routerLink]="route.path"
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact: true}"
+     class="side__icon">
+        <span class="side__icon-line"></span>
+        <nft-icon
+        [name]="route.icon"
+        [width]="route.iconWidth"
+        [height]="route.iconHeight"
+        ></nft-icon>
+    </div>
+
+    <div class="side__icon">
+        <span class="side__icon-line"></span>
+        <nft-icon
+        [name]="'logout.svg'"
+        [width]="21"
+        [height]="30"
+        ></nft-icon>
+    </div>
+    
+    </div>
+
+</div>

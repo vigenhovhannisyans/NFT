@@ -1,0 +1,47 @@
+@import '../../../../assets/variables/colors.scss';
+.side {
+    width: 72px;
+    background: $input-background;
+    border-radius: 16px 0 0 16px;
+    padding: 32px 0;
+    max-height: 90vh;
+    overflow-y: auto;
+    &__icon-list{
+        display: flex;
+        flex-direction: column;
+    }
+    &__icon {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+        position: relative;
+        transition: all .5s;
+        cursor: pointer;
+        &.active{
+            background-color: $hover;
+                .side__icon-line{
+                    height: 100%;
+                }
+        }
+        &-line {
+            position: absolute;
+            display: block;
+            height: 0%;
+            background: $rose;
+            width: 4px;
+            border-radius: 20px;
+            left: 0;
+            top: 0;
+            transition: all .5s;
+        }
+        &:hover {
+            background-color: $hover;
+            .side__icon-line {
+                height: 100%;
+            }
+        }
+    }
+}
